@@ -18,7 +18,9 @@ To test add to cart, from front end, add the following to your URL:
 
 To test update product, use URL: /wp-admin/?test-update-product={product_id}
 
-Note: updating a product will add a space to the product name - you should edit it back afterwards
+Note: updating a product will add "- super-speedy-test" to the end of the product name so you will need to alter it back afterwards
+
+https://imgur.com/nTvTjW1
 
 == Changelog ==
 

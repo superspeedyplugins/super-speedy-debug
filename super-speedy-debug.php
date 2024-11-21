@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Super Speedy Debug
- * Plugin URI:  https://www.superspeedyplugins.com
- * Description: A custom debugging tool to simulate adding products to the cart and updating product names so you can view performance with Query Monitor.
+ * Plugin URI:  https://github.com/superspeedyplugins/super-speedy-debug
+ * Description: A debugging tool to simulate adding products to the cart and updating product names so you can view performance with Query Monitor.
  * Version:     1.0
  * Author:      Dave Hilditch
  * Author URI:  https://www.superspeedyplugins.com
@@ -67,7 +67,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
                 // Modify the product name.
                 $current_name = $product->get_name();
-                $new_name = $current_name . ' '; // Append a space.
+                $new_name = $current_name . ' - super-speedy-test'; // Append some text
 
                 // Update the product name.
                 $product->set_name( $new_name );
@@ -76,8 +76,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
                 // Output a success message.
                 echo 'Product updated successfully: ' . esc_html( $new_name );
 
-                // Stop further processing.
-                exit;
             }
         }
     }
